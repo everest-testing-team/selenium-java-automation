@@ -4,7 +4,7 @@
 	<test name="my test case">
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
-			<class name="com.java.selenium.tests.TextboxTest" />
+			<class name="com.java.selenium.tests.InstagramLogin_Test" />
 		</classes>
 	</test>
 </suite>
