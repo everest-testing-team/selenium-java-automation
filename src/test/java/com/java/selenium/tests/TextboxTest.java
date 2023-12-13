@@ -14,6 +14,12 @@ public class TextboxTest extends TestBase {
 
 	}
 	
+	@Test(priority = 3)
+	public void textboxTest3() {
+		textboxPage.validateSubmitFunctionality();
+
+	}
+	
 
 
 }
