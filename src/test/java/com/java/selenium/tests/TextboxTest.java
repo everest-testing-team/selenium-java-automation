@@ -36,4 +36,10 @@ public class TextboxTest extends TestBase {
 		textboxPage.validateSubmitFunctionality();
 
 	}
+	
+	@Test(priority = 7)
+	public void textboxTest7() {
+		textboxPage.validateSubmitFunctionality();
+
+	}
 }
