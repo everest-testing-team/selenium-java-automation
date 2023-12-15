@@ -18,23 +18,26 @@ public class TextboxPage extends ActionEngine {
 		//WebElement username = driver.findElement(un);
 		//username.clear();
 		//username.sendKeys("Hello World!");
-		type(un, "Hello World!", "User name field");
+		fullname(un, "Hello World!");
 		
 		//WebElement emailAddress = driver.findElement(email);
 		//emailAddress.clear();
 		//emailAddress.sendKeys("testmail@email.com");
-		type(email, "testmail@email.com", "Email Field");
+		email(email, "testmail@email.com");
 		
-		WebElement addressField = driver.findElement(address);
-		addressField.clear();
-		addressField.sendKeys("Address");
+		//WebElement addressField = driver.findElement(address);
+		//addressField.clear();
+		//addressField.sendKeys("Address");
+		currentaddress(address, "current address");
 		
-		WebElement perAddress = driver.findElement(pAddress);
-		perAddress.clear();
-		perAddress.sendKeys("P Address");
+		//WebElement perAddress = driver.findElement(pAddress);
+		//perAddress.clear();
+		//perAddress.sendKeys("P Address");
+		permanentaddress(pAddress, "permanent address");
 		
-		WebElement submitButton = driver.findElement(submit);
-		submitButton.click();
+		//WebElement submitButton = driver.findElement(submit);
+		//submitButton.click();
+		submit(submit);
 		
 		
 	}

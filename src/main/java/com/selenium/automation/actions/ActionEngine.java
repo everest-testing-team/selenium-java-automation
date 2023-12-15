@@ -27,7 +27,7 @@ public class ActionEngine extends TestBase {
 		
 	}
 	
-	public void type(By locator, String data, String locatorName) throws Exception{
+	public void fullname(By locator, String data) throws Exception{
 		
 		try {
 			WebElement we = getWebElement(locator);
@@ -40,5 +40,60 @@ public class ActionEngine extends TestBase {
 		}
 		
 	}
+	
+	public void email(By locator, String data) throws Exception{
+		
+		try {
+			WebElement we = getWebElement(locator);
+			we.clear();
+			we.sendKeys(data);
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+		
+	}
+	
+   public void currentaddress(By locator, String data) throws Exception{
+		
+		try {
+			WebElement we = getWebElement(locator);
+			we.clear();
+			we.sendKeys(data);
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+		
+	}
+
+  public void permanentaddress(By locator, String data) throws Exception{
+	
+	try {
+		WebElement we = getWebElement(locator);
+		we.clear();
+		we.sendKeys(data);
+	}catch(Exception e) {
+		e.printStackTrace();
+	} finally {
+		
+	}
+	
+}
+
+  public void submit(By locator) throws Exception{
+	
+	try {
+		WebElement we = getWebElement(locator);
+		we.click();
+	}catch(Exception e) {
+		e.printStackTrace();
+	} finally {
+		
+	}
+	
+}
 
 }
