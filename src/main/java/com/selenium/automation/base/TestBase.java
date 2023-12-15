@@ -8,6 +8,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import com.selenium.utility.LoadProps;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -15,9 +17,8 @@ public class TestBase {
 	
 	@Parameters({"browser"})
 	@BeforeMethod
-	public static void setup(String browserType) {
+	public static void setup(String browserType) throws Exception{
 		
-		System.out.println("I'm in BaseTest");
 		if (browserType.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -30,7 +31,8 @@ public class TestBase {
 		}
 		
 		driver.manage().window().maximize();
-		driver.get("https://demoqa.com/text-box");
+		driver.get(LoadProps.getData("url"));
+		//driver.get("https://demoqa.com/text-box");
 		
 		//
 
