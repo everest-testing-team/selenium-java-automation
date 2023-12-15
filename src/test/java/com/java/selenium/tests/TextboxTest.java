@@ -9,7 +9,7 @@ public class TextboxTest extends TestBase {
 	TextboxPage textboxPage = new TextboxPage();
 
 	@Test(priority = 1)
-	public void textboxTest() {
+	public void textboxTest() throws Exception {
 		textboxPage.validateSubmitFunctionality();
 
 	}
