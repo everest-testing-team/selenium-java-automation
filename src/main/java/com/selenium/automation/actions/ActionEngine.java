@@ -2,6 +2,8 @@ package com.selenium.automation.actions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
 import com.selenium.automation.base.TestBase;
 
 public class ActionEngine extends TestBase {
@@ -40,8 +42,6 @@ public class ActionEngine extends TestBase {
 		}
 		
 	}
-	
-	
 
   public void submit(By locator) throws Exception{
 	
@@ -55,5 +55,50 @@ public class ActionEngine extends TestBase {
 	}
 	
 }
+  
+	public void selectByyDropdownVisibleText(By locator, String locatorName, String visibleText) throws Exception{
+		
+		try {
+			WebElement we = getWebElement(locator);
+			Select dropDown = new Select(we);
+			dropDown.selectByVisibleText(visibleText);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+		
+	}
+	
+	public void selectByyDropdownIndex(By locator, String locatorName, int index) throws Exception{
+		
+		try {
+			WebElement we = getWebElement(locator);
+			Select dropDown = new Select(we);
+			dropDown.selectByIndex(index);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+		
+	}
+	
+	public void selectByDropdownValue(By locator, String locatorName, String value) throws Exception{
+		
+		try {
+			WebElement we = getWebElement(locator);
+			Select dropDown = new Select(we);
+			dropDown.selectByValue(value);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+		
+	}
 
 }
