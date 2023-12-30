@@ -16,6 +16,20 @@ public class ActionEngine extends TestBase {
 		
 	}
 	
+	public String getText(By locator, String locatorName) throws Exception{
+		String text = "";
+		try {
+			WebElement we = getWebElement(locator);
+			we.getText();
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+		return text;
+	}
+	
+	
 	public void click(By locator, String locatorName) throws Exception{
 		
 		try {
